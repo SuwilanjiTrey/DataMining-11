@@ -29,8 +29,7 @@ CRISP-DM Phase: Business Understanding — This stage defines the scope, objecti
    6. Case summary
    7. Keywords
    Preprocess and encode the descriptive text to extract meaningful features for classification.
-   Evaluate multiple algorithms (e.g., Logistic Regression, BERT-based models, etc) to determine the
-   best performing classifier.
+   Evaluate multiple algorithms to determine the best performing classifier.
 
   1.4 Initial Project Success Criteria
    The following are the measures put in place to consider this project a successful:
