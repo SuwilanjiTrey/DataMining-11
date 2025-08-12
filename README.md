@@ -1,7 +1,8 @@
 CRISP-DM Phase: Business Understanding — This stage defines the scope, objectives, and success criteria for the project before proceeding to Data Understanding
 
 1. Business Understanding
-   1.1 Problem Statement
+
+  1.1 Problem Statement
    The Zambian judiciary produces a large number of legal judgments each year, each accompanied by
    descriptive information such as the case title, case number, court, judgment date, judges presiding,
    a brief case summary, and relevant keywords. Currently, classification of judgments by type (e.g.,
