@@ -1,2 +1,1 @@
-# DataMining-11
-Data mining #11
+CRISP-DM Phase: Business Understanding — This stage defines the scope, objectives, and success criteria for the project before proceeding to Data Understanding
