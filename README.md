@@ -43,3 +43,68 @@ CRISP-DM Phase: Business Understanding — This stage defines the scope, objecti
    1. The predicted categories are meaningful and consistent with expert legal classification.
    2. The classification process is significantly faster than manual sorting.
    3. The model generalizes well to new, unseen judgments.
+
+2. Data Understanding
+1.Load your datasets into a pandas dataframe
+
+[ ]
+from google.colab import drive
+drive.mount('/content/drive/')
+Mounted at /content/drive/
+
+[ ]
+import pandas as pd
+file_path = "/content/drive/MyDrive/Colab Notebooks/misc-unza25-csc4792-project_team11/Group_11_classification_of_judgements - Group_11_Classification_of_type.csv"
+df = pd.read_csv(file_path)
+2. Perform initial data exploration using commands like .head(), .info(), .describe(), and .shape
+
+[ ]
+df.head()
+
+
+[ ]
+df.info()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 19 entries, 0 to 18
+Data columns (total 7 columns):
+ #   Column           Non-Null Count  Dtype 
+---  ------           --------------  ----- 
+ 0   CaseTitle        17 non-null     object
+ 1   CaseNumber       17 non-null     object
+ 2   Court            17 non-null     object
+ 3   JudgementDate    17 non-null     object
+ 4   JudgesPresiding  16 non-null     object
+ 5   CaseSummary      17 non-null     object
+ 6   Keywords         5 non-null      object
+dtypes: object(7)
+memory usage: 1.2+ KB
+
+[ ]
+df.describe()
+
+
+[ ]
+df.shape
+(19, 7)
+3. Create initial visualizations (e.g., histograms for numerical columns, bar charts for categorical columns) to understand the distributions of key attributes
+
+[ ]
+import matplotlib.pyplot as plt
+var_court_counts = df['Court'].value_counts()
+plt.barh(var_court_counts.index,var_court_counts.values,color="purple")
+plt.title("Courts by Number of Judgments")
+plt.xlabel("Count of cases")
+plt.ylabel("Court Name")
+plt.show()
+
+4. Write a brief summary of your initial findings
+Our initial findings for this are:
+For now the dataset contains 19 rows and 7 columns
+The columns include Case Title, Case Number, Court, Judgement Date, Judges Presiding, Case Summary, Keywords
+Some fields contain missing values that may need cleaning
+The distribution of judgement types is imbalanced, with High court cases being the most and court of appeal having the fewest
+Zambia legal information institute (Z.L.I.I.) was our main source of data
+Text-based fields will require preprocessing, possibly the following:
+Tokenization
+Stopword removal
+embeddings
