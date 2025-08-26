@@ -108,3 +108,27 @@ Text-based fields will require preprocessing, possibly the following:
 Tokenization
 Stopword removal
 embeddings
+
+##Data Preparation Summary
+
+The data preparation phase focuses on cleaning, transforming, and structuring the dataset to ensure it is ready for modeling. This involves addressing missing values and duplicates, creating new features to enhance predictive power, and transforming variables into forms suitable for analysis. This what we did in each stage:
+
+Data Cleaning
+
+Checked for missing values and duplicates.
+Filled numeric missing values with median.
+Filled categorical missing values with mode.
+Removed duplicate records.
+
+Feature Engineering
+
+Created CaseTitleLength to measure title complexity.
+Created NumJudges to count judges presiding over the case.
+Created CaseSummaryLength to measure detail in case summaries.
+Created HasKeywords as a binary indicator for presence of keywords.
+Extracted Year from JudgementDate for temporal analysis
+
+Data Transformation
+
+Encoded categorical variables (Court, JudgesPresiding) into numeric form.
+Standardized numerical variables (CaseTitleLength, CaseSummaryLength) for scale-sensitive algorithm
