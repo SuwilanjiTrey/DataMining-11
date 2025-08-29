@@ -109,7 +109,7 @@ Tokenization
 Stopword removal
 embeddings
 
-##Data Preparation Summary
+3. Data Preparation Summary
 
 The data preparation phase focuses on cleaning, transforming, and structuring the dataset to ensure it is ready for modeling. This involves addressing missing values and duplicates, creating new features to enhance predictive power, and transforming variables into forms suitable for analysis. This what we did in each stage:
 
@@ -132,3 +132,12 @@ Data Transformation
 
 Encoded categorical variables (Court, JudgesPresiding) into numeric form.
 Standardized numerical variables (CaseTitleLength, CaseSummaryLength) for scale-sensitive algorithm
+
+4. Modeling
+In this phase, we apply machine learning algorithms to our prepared dataset.
+
+We selected a Decision Tree Classifier because:
+
+It is easy to interpret and explain results to non-technical stakeholders.
+It works well with mixed categorical and numerical features.
+It can capture non-linear relationships in our data.
